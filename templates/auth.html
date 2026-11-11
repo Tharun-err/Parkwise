@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}{{ 'Create your Parkwise account' if mode=='register' else 'Welcome back' }} — Parkwise{% endblock %}
+{% block content %}
+<section class="auth-shell {{ 'auth-register' if mode == 'register' else 'auth-login' }}">
+  <div class="auth-showcase">
+    <div class="showcase-orbit orbit-one"></div><div class="showcase-orbit orbit-two"></div>
+    <div class="showcase-topline"><span class="showcase-mark">P</span><span>PARKWISE / SMART MOBILITY</span></div>
+    <div class="showcase-copy">
+      <span class="eyebrow"><i class="eyebrow-pulse"></i> {{ 'YOUR NEXT PARKING STORY STARTS HERE' if mode=='register' else 'WELCOME BACK TO PARKWISE' }}</span>
+      <h1>{{ 'Make room for<br><em>better days.</em>'|safe if mode=='register' else 'Your space is<br><em>waiting.</em>'|safe }}</h1>
+      <p>{{ 'Create an account, reserve a spot before you leave, and arrive with confidence. A smoother parking experience is just a few clicks away.' if mode=='register' else 'Pick up right where you left off. Your bookings, parking passes, and next arrival are all in one place.' }}</p>
+      <div class="showcase-points">
+        <div><span class="point-icon">⌁</span><span><b>Reserve in seconds</b><small>Choose a slot that fits your schedule.</small></span></div>
+        <div><span class="point-icon">▦</span><span><b>One QR. Easy access.</b><small>Keep your digital pass ready to scan.</small></span></div>
+      </div>
+    </div>
+    <div class="showcase-ticket">
+      <div class="ticket-top"><span>YOUR PARKING, REIMAGINED</span><span class="ticket-live"><i></i> LIVE & SIMPLE</span></div>
+      <div class="ticket-main"><div class="ticket-symbol">P<span>↗</span></div><div><b>Park more calmly.</b><small>Less searching. More arriving.</small></div><div class="ticket-arrow">↗</div></div>
+      <div class="ticket-bottom"><span>SMART PARKING SYSTEM</span><span>01 — 2026</span></div>
+    </div>
+  </div>
+
+  <div class="auth-panel">
+    <div class="auth-panel-inner">
+      <a class="auth-back-link" href="{{ url_for('index') }}">← <span>Back to home</span></a>
+      <div class="auth-heading">
+        <span class="auth-kicker">{{ 'GET STARTED — IT’S FREE' if mode=='register' else 'YOUR PARKWISE ACCOUNT' }}</span>
+        <h2>{{ 'Create account' if mode=='register' else 'Welcome back' }}<span>.</span></h2>
+        <p>{{ 'A few details and your parking plans are sorted.' if mode=='register' else 'Sign in to manage your bookings and QR passes.' }}</p>
+      </div>
+
+      <form method="post" class="form-stack auth-form" id="auth-form">
+        {% if mode=='register' %}
+        <label class="field-label">Full name
+          <span class="input-shell"><span class="input-symbol">✳</span><input name="name" type="text" placeholder="Enter your full name" required autocomplete="name" minlength="2"></span>
+        </label>
+        {% endif %}
+        <label class="field-label">Email address
+          <span class="input-shell"><span class="input-symbol">✉</span><input name="email" type="email" placeholder="you@example.com" required autocomplete="email"></span>
+        </label>
+        <label class="field-label">Password
+          <span class="input-shell"><span class="input-symbol">⌑</span><input id="password" name="password" type="password" placeholder="{{ 'Create a strong password' if mode=='register' else 'Enter your password' }}" required {% if mode=='register' %}minlength="8"{% endif %} autocomplete="{{ 'new-password' if mode=='register' else 'current-password' }}"><button class="password-toggle" type="button" data-toggle-password="password" aria-label="Show password" aria-pressed="false"><span class="eye-icon">◉</span><span class="toggle-label">Show</span></button></span>
+        </label>
+        {% if mode=='register' %}
+        <div class="password-meter" id="password-meter" aria-live="polite"><div class="meter-track"><span id="meter-fill"></span></div><span id="meter-label">Use at least 8 characters</span></div>
+        <label class="field-label">Confirm password
+          <span class="input-shell"><span class="input-symbol">⌑</span><input id="confirm-password" name="confirm_password" type="password" placeholder="Enter your password again" required minlength="8" autocomplete="new-password"><button class="password-toggle" type="button" data-toggle-password="confirm-password" aria-label="Show confirm password" aria-pressed="false"><span class="eye-icon">◉</span><span class="toggle-label">Show</span></button></span>
+        </label>
+        <label class="terms-row"><input type="checkbox" name="terms" required><span>I agree to the <b>demo project terms</b> and understand this is a student project.</span></label>
+        {% endif %}
+        <button class="btn btn-dark btn-full auth-submit" type="submit"><span>{{ 'Create my account' if mode=='register' else 'Sign in to Parkwise' }}</span><b>↗</b></button>
+      </form>
+
+      <p class="form-switch">{{ 'Already have an account?' if mode=='register' else 'New to Parkwise?' }} <a href="{{ url_for('login' if mode=='register' else 'register') }}">{{ 'Sign in' if mode=='register' else 'Create an account' }} <span>↗</span></a></p>
+      {% if mode=='login' %}<div class="demo-hint"><span class="demo-dot"></span><div><b>Demo administrator access</b><small>admin@parkwise.local · Admin@123</small></div></div>{% endif %}
+      <div class="auth-trust"><span>⌁</span> Your details are protected with password hashing.</div>
+    </div>
+  </div>
+</section>
+{% endblock %}

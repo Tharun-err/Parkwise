@@ -1,0 +1,209 @@
+:root{--ink:#171a1f;--muted:#737b86;--line:#e8ebef;--paper:#f7f8fa;--white:#fff;--lime:#c8f169;--green:#26734d;--red:#b44d4d;--shadow:0 24px 70px rgba(28,36,47,.08)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input{font:inherit}.topbar{height:78px;padding:0 max(calc((100% - 1180px)/2),5.5%);display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.84);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}.brand{font:800 22px 'Manrope',sans-serif;letter-spacing:-1.2px;display:flex;align-items:center;gap:9px}.brand-mark{width:29px;height:29px;border-radius:9px;background:var(--ink);color:var(--lime);display:grid;place-items:center;font-size:16px}.brand-dot{color:#8ebc39;margin-left:-9px}.topbar nav{display:flex;align-items:center;gap:27px;color:#555e69;font-weight:600}.nav-cta{background:var(--ink);color:white;padding:11px 17px;border-radius:9px}.nav-user{color:#9299a2;font-size:12px}.nav-logout{color:var(--ink)}.page-wrap{max-width:1180px;margin:0 auto;padding:0 30px;min-height:calc(100vh - 140px)}.footer{max-width:1180px;margin:40px auto 0;padding:24px 30px 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#9aa1aa;font-size:12px}.hero{min-height:610px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px;padding:70px 0 55px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:1.7px;color:#8b949f;display:inline-flex;align-items:center;gap:9px}.eyebrow-line{width:24px;height:1px;background:#a9b1ba}.hero h1,.pass-copy h1,.auth-aside h1,.scan-detail h1{font:800 clamp(52px,6vw,78px)/1.04 'Manrope',sans-serif;letter-spacing:-4.5px;margin:25px 0 20px}.hero h1 span,.pass-copy h1 span,.scan-detail h1 span{color:#9dbb64}.hero-text{font-size:16px;line-height:1.8;color:var(--muted);max-width:440px}.hero-actions{display:flex;align-items:center;gap:25px;margin-top:31px}.btn{border:0;display:inline-flex;justify-content:center;align-items:center;gap:25px;padding:15px 19px;border-radius:9px;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-dark{background:var(--ink);color:white}.btn-dark:hover{background:#30363e}.btn span{font-size:17px}.text-link{font-weight:700;font-size:12px;border-bottom:1px solid #c9ced4;padding-bottom:4px}.hero-proof{display:flex;align-items:center;gap:25px;margin-top:60px}.proof-item{display:grid;gap:5px}.proof-item strong{font:800 20px 'Manrope'}.proof-item span{font-size:11px;color:var(--muted)}.proof-divider{height:32px;width:1px;background:#dfe3e8}.hero-visual{position:relative;min-height:450px;display:grid;place-items:center}.visual-glow{position:absolute;width:390px;height:390px;border-radius:50%;background:#e9f0dc;filter:blur(3px)}.parking-card{position:relative;width:min(100%,435px);background:white;border:1px solid #edf0e9;border-radius:18px;padding:25px;box-shadow:var(--shadow);transform:rotate(1.5deg)}.parking-head{display:flex;justify-content:space-between;align-items:center}.tiny-label{font-size:9px;letter-spacing:1.3px;color:#9ba3ac;font-weight:700}.parking-head h3{font:700 19px 'Manrope';margin:6px 0 0}.live-pill,.qr-live{font-size:9px;color:#39805b;background:#eff8f0;border-radius:30px;padding:7px 10px;font-weight:700;display:flex;gap:6px;align-items:center}.live-pill i,.qr-live i{width:6px;height:6px;background:#4ca46c;border-radius:50%}.garage-grid{margin:27px 0 20px;border:1px solid #edf0f2;border-radius:12px;padding:18px 12px}.garage-lane>span{font-size:9px;letter-spacing:1.2px;color:#a0a7af;font-weight:700}.slot-row{display:flex;justify-content:space-around;gap:10px;margin-top:12px}.slot-mini{height:48px;flex:1;border:1px solid #dce7cb;background:#f5f9ee;border-radius:7px;display:grid;place-items:center;color:#799a4c;font-size:10px}.slot-mini.occupied{background:#f5f5f5;border-color:#e6e6e6;color:#b6bbc1}.lane-divider{height:35px;border-top:1px dashed #dce1e6;border-bottom:1px dashed #dce1e6;margin:17px 0;display:grid;place-items:center}.lane-divider span{font-size:8px;letter-spacing:2px;color:#b4bbc2;background:white;padding:0 12px}.legend{display:flex;gap:22px;color:#8c949e;font-size:10px}.legend span{display:flex;align-items:center;gap:7px}.legend i{width:8px;height:8px;border-radius:2px}.legend-free{background:#c7dfa6}.legend-busy{background:#dedfe1}.visual-bottom{border-top:1px solid #edf0f2;margin-top:22px;padding-top:16px;display:flex;align-items:center;justify-content:space-between}.visual-bottom>div{display:grid;gap:6px}.visual-bottom strong{font:700 13px 'Manrope'}.round-arrow{width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;display:grid;place-items:center}.floating-tag{position:absolute;bottom:23px;left:-14px;background:white;border:1px solid #edf0f2;border-radius:12px;box-shadow:0 12px 35px #26303d15;padding:12px 14px;display:flex;align-items:center;gap:11px}.floating-icon{width:34px;height:34px;background:#f0f6e5;border-radius:9px;display:grid;place-items:center;font-size:21px}.floating-tag div{display:grid;gap:4px}.floating-tag strong{font-size:11px}.floating-tag small{font-size:9px;color:#929aa3}.check-mark{color:#4c9b69;margin-left:8px}.feature-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:32px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:35px}.feature-strip>div{display:grid;gap:7px}.feature-number{font-size:10px;color:#a0a8b0;font-weight:700;letter-spacing:1px}.feature-strip strong{font:700 14px 'Manrope'}.feature-strip p{margin:0;color:var(--muted);font-size:12px}.bottom-cta{padding:65px 0 70px;display:flex;align-items:center;justify-content:space-between}.bottom-cta h2{font:800 32px 'Manrope';letter-spacing:-1.4px;margin:10px 0 0}.btn-outline{border:1px solid #d9dee4;background:white;color:var(--ink)}.auth-layout{max-width:930px;margin:70px auto;display:grid;grid-template-columns:1fr 1fr;background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.auth-aside{background:#1c2228;color:white;padding:55px 45px;display:flex;flex-direction:column;justify-content:center;min-height:530px}.auth-aside .eyebrow{color:#aeb7c0}.auth-aside h1{font-size:43px;letter-spacing:-2.4px;margin:22px 0 17px}.auth-aside p{line-height:1.8;color:#aeb7c0;max-width:320px}.auth-aside-note{margin-top:55px;color:#d3d9df;font-size:11px}.auth-aside-note span{color:var(--lime);font-size:18px;margin-right:7px}.auth-panel{padding:55px 48px;display:flex;flex-direction:column;justify-content:center}.panel-heading h2{font:800 29px 'Manrope';letter-spacing:-1px;margin:12px 0 7px}.panel-heading p{color:var(--muted);margin:0 0 28px}.form-stack{display:grid;gap:18px}.form-stack label{font-size:11px;font-weight:700;color:#535d68;display:grid;gap:8px}.form-stack input,.booking-fields input{height:46px;border:1px solid #e3e7eb;border-radius:8px;padding:0 13px;outline:none;background:#fcfcfd;color:var(--ink)}input:focus{border-color:#9dbb64!important;box-shadow:0 0 0 3px #c8f16930}.btn-full{width:100%;margin-top:5px}.form-switch{text-align:center;color:var(--muted);font-size:11px;margin-top:23px}.form-switch a{color:#242b32;font-weight:700;text-decoration:underline}.demo-hint{margin-top:20px;padding:12px;background:#f7f8f4;border-radius:8px;color:#727b83;font-size:10px;line-height:1.8}.flash-stack{padding-top:14px}.flash{padding:12px 15px;border-radius:8px;margin-bottom:8px;font-size:12px;display:flex;justify-content:space-between}.flash.success{background:#edf7ef;color:#34744a}.flash.error{background:#fff0ee;color:#a84d45}.flash button{border:0;background:none;font-size:18px;color:inherit;cursor:pointer}.dashboard-head{padding:53px 0 27px;display:flex;justify-content:space-between;align-items:end}.dashboard-head h1{font:800 35px 'Manrope';letter-spacing:-1.5px;margin:9px 0 5px}.dashboard-head p,.section-title p{margin:0;color:var(--muted);font-size:12px}.date-chip,.admin-chip,.step-label{font-size:9px;letter-spacing:1.1px;color:#8b949f;border:1px solid #e1e5e9;background:white;padding:9px 12px;border-radius:7px;font-weight:700}.admin-chip{color:#66823f;background:#f3f8e9;border-color:#e1ebd1}.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat-card{background:white;border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:grid;gap:7px}.stat-card>span{color:#858e98;font-size:11px}.stat-card strong{font:800 28px 'Manrope';letter-spacing:-1px}.stat-card small{font-size:10px;color:#a1a8b0}.stat-accent{background:#f0f6e5;border-color:#e5edda}.stat-accent strong{color:#597c2d;font-size:23px}.section-block{margin-top:48px}.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.section-title h2{font:800 22px 'Manrope';letter-spacing:-.8px;margin:8px 0 5px}.booking-panel{background:white;border:1px solid var(--line);border-radius:13px;padding:22px}.booking-fields{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:13px;align-items:end}.booking-fields label{display:grid;gap:8px;font-size:10px;font-weight:700;color:#68717b}.booking-fields input{width:100%;font-size:11px}.booking-fields .btn{height:46px;padding:0 18px;white-space:nowrap}.slot-message{font-size:11px;color:#929aa3;margin:20px 0 12px}.slot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.slot-result-card{position:relative;border:1px solid #e7ebef;border-radius:10px;padding:14px;display:grid;gap:7px}.slot-result-card strong{font:800 17px 'Manrope'}.slot-result-card small{font-size:10px;color:#8d96a0}.slot-result-rate{position:absolute;right:12px;top:15px;font-size:10px;color:#729044;font-weight:700}.btn-small{padding:9px 11px;font-size:10px;gap:8px;margin-top:4px}.empty-inline{padding:20px;border:1px dashed #dce1e5;border-radius:8px;color:#8a929b;font-size:11px;grid-column:1/-1}.table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:12px}.data-table{width:100%;border-collapse:collapse;white-space:nowrap;text-align:left}.data-table th{background:#fafbfc;color:#9aa2ab;font-size:9px;letter-spacing:.8px;font-weight:700;padding:14px 15px}.data-table td{padding:15px;border-top:1px solid #f0f2f4;font-size:11px;color:#5c6670}.data-table td b{color:#222a31}.data-table td small{display:block;color:#a0a7af;font-size:9px;margin-top:5px}.table-link{font-size:10px;font-weight:700;color:#5c7d34}.status{font-size:9px;text-transform:capitalize;padding:6px 8px;border-radius:5px;background:#f1f3f5;color:#707983;white-space:nowrap}.status-booked,.status-available{background:#eff7e7;color:#65863c}.status-checked_in{background:#eaf2fc;color:#4774a8}.status-completed{background:#edf6ef;color:#42805a}.status-cancelled{background:#fdf0ee;color:#ae6158}.empty-state{padding:45px 20px;text-align:center;background:white;border:1px dashed #dce1e5;border-radius:12px}.empty-icon{font-size:30px;color:#a1bb77}.empty-state h3{font:700 17px 'Manrope';margin:10px 0 6px}.empty-state p{font-size:11px;color:var(--muted)}.feature-strip,.bottom-cta{margin-left:0;margin-right:0}.back-row{display:flex;justify-content:space-between;align-items:center;padding:35px 0 10px}.back-row>a{font-size:11px;color:#6e7882;font-weight:700}.pass-layout{display:grid;grid-template-columns:1fr 370px;gap:80px;align-items:center;max-width:930px;margin:35px auto 75px}.pass-copy h1{font-size:60px;margin:18px 0}.pass-copy>p{color:var(--muted);line-height:1.8;max-width:450px}.pass-details{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;margin-top:30px;padding-top:25px;border-top:1px solid var(--line)}.pass-details>div{display:grid;gap:7px}.pass-details span{font-size:9px;letter-spacing:1px;color:#9ba3ac;font-weight:700}.pass-details strong{font-size:12px}.demo-payment{font-size:10px;color:#a1a8af;margin-top:25px}.qr-card{background:white;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow);text-align:center}.qr-top{display:flex;justify-content:space-between;align-items:center}.qr-live{font-size:8px}.qr-image{margin:24px auto 16px;width:220px;height:220px;display:grid;place-items:center}.qr-image img{width:100%;height:100%;image-rendering:pixelated}.qr-card h3{font:700 16px 'Manrope';margin:8px 0}.qr-card p{font-size:10px;line-height:1.6;color:#929aa3;max-width:240px;margin:0 auto}.qr-ref{margin:18px 0;padding:10px;border-top:1px dashed #e1e5e9;border-bottom:1px dashed #e1e5e9;color:#737d87;font-size:10px;letter-spacing:2px;font-weight:700}.qr-card .btn{font-size:11px}.scanner-panel{display:grid;grid-template-columns:1.4fr 1fr;gap:35px;padding:25px;background:white;border:1px solid var(--line);border-radius:13px}.scanner-panel h3{font:700 15px 'Manrope';margin:0 0 6px}.scanner-panel p,.scanner-side p{font-size:11px;color:var(--muted);line-height:1.7}.qr-reader{max-width:440px;margin-top:15px}.qr-reader button{border:1px solid #dfe4e8!important;border-radius:6px!important;padding:8px 12px!important;background:white!important}.scanner-side{border-left:1px solid var(--line);padding:25px 15px 15px 35px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.scanner-icon,.scan-icon-large{font-size:38px;color:#9bbd60}.scanner-side strong{font:700 14px 'Manrope';margin-top:15px}.scanner-side .text-link{margin-top:15px}.slot-admin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.slot-admin-card{background:white;border:1px solid var(--line);border-radius:10px;padding:14px}.slot-admin-card>div:first-child{display:flex;justify-content:space-between}.slot-code{font:800 16px 'Manrope'}.slot-type{font-size:9px;color:#9aa2ab}.slot-admin-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:18px}.mini-action{border:0;background:#f1f3f5;border-radius:5px;padding:7px 9px;font-size:9px;font-weight:700;cursor:pointer}.admin-stats{grid-template-columns:repeat(4,1fr)}.scan-detail{max-width:650px;margin:30px auto 80px;padding:42px;background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.scan-detail h1{font-size:46px;letter-spacing:-2px;margin:12px 0 24px}.scan-icon-large{margin-bottom:14px}.scan-details{margin-top:10px}.scan-actions{margin-top:28px}.scan-actions .btn{width:100%}.success-note{padding:14px;background:#eff8ef;color:#39784b;border-radius:8px;font-size:12px}.error-page{margin:100px auto;max-width:600px}.error-page h1{font:800 35px 'Manrope'}.error-page .btn{margin-top:15px}
+@media(max-width:900px){.hero{gap:20px}.hero h1{font-size:60px}.booking-fields{grid-template-columns:1fr 1fr}.booking-fields .btn{width:100%}.slot-grid,.slot-admin-grid{grid-template-columns:repeat(3,1fr)}.pass-layout{gap:35px;grid-template-columns:1fr 330px}.admin-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.topbar{height:66px;padding:0 18px}.topbar nav{gap:13px;font-size:11px}.nav-user{display:none}.page-wrap{padding:0 18px}.hero{grid-template-columns:1fr;padding:55px 0 35px;gap:10px}.hero h1{font-size:58px;letter-spacing:-3px}.hero-text{font-size:14px}.hero-visual{min-height:390px;margin-top:10px}.parking-card{padding:18px}.visual-glow{width:310px;height:310px}.floating-tag{left:0;bottom:5px}.feature-strip{grid-template-columns:1fr;gap:23px;padding:28px 0}.bottom-cta{padding:45px 0;gap:20px;align-items:flex-start;flex-direction:column}.bottom-cta h2{font-size:27px}.auth-layout{grid-template-columns:1fr;margin:35px 0}.auth-aside{min-height:260px;padding:32px}.auth-aside h1{font-size:34px}.auth-aside-note{margin-top:20px}.auth-panel{padding:34px 27px}.dashboard-head{padding:35px 0 20px;align-items:flex-start;gap:12px;flex-direction:column}.dashboard-head h1{font-size:29px}.stat-grid,.admin-stats{grid-template-columns:1fr 1fr;gap:9px}.stat-card{padding:15px}.stat-card strong{font-size:24px}.section-block{margin-top:36px}.section-title{align-items:flex-start}.section-title h2{font-size:20px}.booking-panel{padding:15px}.booking-fields{grid-template-columns:1fr}.slot-grid,.slot-admin-grid{grid-template-columns:1fr 1fr}.pass-layout{grid-template-columns:1fr;margin:20px auto 50px;gap:25px}.pass-copy h1{font-size:50px}.qr-card{max-width:370px;width:100%;margin:auto}.scanner-panel{grid-template-columns:1fr;padding:17px}.scanner-side{border-left:0;border-top:1px solid var(--line);padding:20px 0 5px}.scan-detail{padding:25px 20px;margin:20px auto 50px}.scan-detail h1{font-size:39px}.pass-details{gap:16px}.footer{padding:22px 18px}.step-label{font-size:8px}.table-wrap{margin-right:-2px}}
+@media print{.topbar,.footer,.back-row,.pass-copy,.qr-card .btn{display:none!important}.page-wrap{max-width:none;padding:0}.pass-layout{display:block;margin:0}.qr-card{box-shadow:none;border:0;margin:0 auto}}
+
+
+/* =========================================================
+   PARKWISE VISUAL REFRESH — light, vivid, and motion-led
+   ========================================================= */
+:root{
+  --ink:#15221f;--muted:#6f7c78;--line:#e5ebe6;--paper:#f6f8f5;
+  --lime:#c8f169;--green:#287a58;--shadow:0 24px 70px rgba(20,42,33,.09);
+  --accent:#b8e85d;--mint:#eaf6dc;--violet:#e9e7ff;
+}
+body{
+  background:
+    radial-gradient(ellipse at 8% 8%,rgba(198,235,143,.18),transparent 28%),
+    radial-gradient(ellipse at 92% 35%,rgba(203,231,220,.22),transparent 26%),
+    var(--paper);
+}
+::selection{background:#d9f3a7;color:#17241e}
+.topbar{border-bottom-color:rgba(220,230,222,.85);box-shadow:0 8px 30px rgba(20,42,33,.025)}
+.brand-mark{background:linear-gradient(145deg,#172a23,#314c3d);box-shadow:0 5px 12px #172a2325}
+.brand-dot{color:#82ad3e}
+.topbar nav a{transition:color .2s,transform .2s}
+.topbar nav a:hover{color:#548c35;transform:translateY(-1px)}
+.nav-cta{background:#172a23;box-shadow:0 7px 18px #172a2320}
+.nav-cta:hover{background:#2d493b}
+.btn{position:relative;overflow:hidden;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s}
+.btn::after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(110deg,transparent,rgba(255,255,255,.18),transparent);transition:transform .6s}
+.btn:hover::after{transform:translateX(120%)}
+.btn-dark{background:linear-gradient(120deg,#172a23,#304c3c);box-shadow:0 9px 20px rgba(24,48,37,.13)}
+.btn-dark:hover{background:linear-gradient(120deg,#274536,#3b654b);box-shadow:0 13px 25px rgba(24,48,37,.18);transform:translateY(-3px)}
+.btn-outline:hover{border-color:#9cbd77;background:#f7fbf1;transform:translateY(-2px)}
+.hero h1 span,.pass-copy h1 span,.scan-detail h1 span{color:#82a94a}
+.visual-glow{background:radial-gradient(circle,#e4f3ce 0%,#edf5e8 55%,rgba(237,245,232,0) 72%);animation:glow-breathe 7s ease-in-out infinite}
+.parking-card{box-shadow:0 28px 80px rgba(34,58,43,.12);border-color:#e8eee5;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.parking-card:hover{transform:translateY(-7px) rotate(0deg);box-shadow:0 34px 90px rgba(34,58,43,.16)}
+.slot-mini{transition:transform .2s,background .2s,box-shadow .2s}
+.slot-mini:not(.occupied):hover{transform:translateY(-3px);background:#e9f7d8;box-shadow:0 5px 12px #9fca6a30}
+.floating-tag{animation:float-card 5s ease-in-out infinite}
+.feature-strip>div{transition:transform .25s}
+.feature-strip>div:hover{transform:translateY(-4px)}
+.feature-number{color:#83a84a}
+.stat-card,.booking-panel,.scanner-panel,.slot-admin-card,.qr-card{transition:transform .25s,box-shadow .25s,border-color .25s}
+.stat-card:hover,.slot-admin-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(24,48,37,.07);border-color:#d4e5c5}
+input:focus{outline:none}
+.form-stack input:focus,.booking-fields input:focus{border-color:#91b96b!important;box-shadow:0 0 0 4px rgba(164,207,113,.17)!important}
+
+/* Auth experience */
+.auth-shell{
+  max-width:1080px;min-height:690px;margin:48px auto 70px;display:grid;
+  grid-template-columns:1.02fr .98fr;background:#fff;border:1px solid #e4ebe4;
+  border-radius:26px;overflow:hidden;box-shadow:0 30px 90px rgba(24,48,37,.10);
+  position:relative;isolation:isolate;animation:auth-arrive .7s cubic-bezier(.2,.8,.2,1) both;
+}
+.auth-showcase{
+  position:relative;overflow:hidden;min-height:690px;padding:34px 44px 30px;
+  display:flex;flex-direction:column;justify-content:space-between;color:#f7fbf5;
+  background:radial-gradient(circle at 85% 16%,rgba(183,232,93,.2),transparent 25%),
+    radial-gradient(circle at 5% 90%,rgba(94,145,112,.3),transparent 35%),
+    linear-gradient(145deg,#14251f 0%,#1c382c 52%,#294a38 100%);
+}
+.auth-showcase::before{
+  content:"";position:absolute;inset:0;opacity:.14;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);
+  background-size:42px 42px;mask-image:linear-gradient(135deg,black,transparent 75%);
+}
+.showcase-orbit{position:absolute;border:1px solid rgba(211,244,175,.13);border-radius:50%;pointer-events:none}
+.orbit-one{width:470px;height:470px;right:-225px;top:75px}
+.orbit-two{width:330px;height:330px;right:-155px;top:145px;border-style:dashed;animation:orbit-spin 55s linear infinite}
+.showcase-topline{position:relative;z-index:1;display:flex;align-items:center;gap:11px;font-size:9px;font-weight:700;letter-spacing:2px;color:#b8c9bd}
+.showcase-mark{width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:#c8f169;color:#1c3025;font:800 17px 'Manrope';box-shadow:0 7px 20px #c8f16925}
+.showcase-copy{position:relative;z-index:1;margin:55px 0 35px}
+.showcase-copy .eyebrow{color:#b9d3b9;font-size:9px;letter-spacing:1.6px}
+.eyebrow-pulse{width:7px;height:7px;background:#c8f169;border-radius:50%;box-shadow:0 0 0 5px #c8f16920;animation:pulse-dot 2s infinite}
+.showcase-copy h1{font:800 clamp(42px,4.3vw,58px)/1.06 'Manrope';letter-spacing:-3.2px;margin:24px 0 17px}
+.showcase-copy h1 em{font-style:normal;color:#c8f169}
+.showcase-copy>p{max-width:365px;color:#b6c7bc;font-size:13px;line-height:1.85}
+.showcase-points{display:grid;gap:17px;margin-top:30px}
+.showcase-points>div{display:flex;align-items:center;gap:12px}
+.point-icon{width:36px;height:36px;border:1px solid #ffffff20;border-radius:11px;display:grid;place-items:center;color:#c8f169;font-size:19px;background:#ffffff09}
+.showcase-points>div>span:last-child{display:grid;gap:4px}
+.showcase-points b{font-size:11px;color:#f5faf5}
+.showcase-points small{font-size:10px;color:#a9bdb0}
+.showcase-ticket{position:relative;z-index:1;padding:17px 18px 13px;border:1px solid #ffffff25;border-radius:15px;background:linear-gradient(120deg,#ffffff12,#ffffff06);backdrop-filter:blur(12px);box-shadow:0 15px 35px #07180f25}
+.ticket-top,.ticket-bottom{display:flex;justify-content:space-between;align-items:center;font-size:8px;letter-spacing:1.3px;color:#a9beb0;font-weight:700}
+.ticket-live{display:flex;align-items:center;gap:6px;color:#d7efbd;letter-spacing:.7px}
+.ticket-live i{width:6px;height:6px;border-radius:50%;background:#c8f169;box-shadow:0 0 0 4px #c8f16920}
+.ticket-main{display:flex;align-items:center;gap:12px;padding:18px 0}
+.ticket-symbol{position:relative;width:43px;height:43px;display:grid;place-items:center;background:#c8f169;border-radius:12px;color:#1a3023;font:800 22px 'Manrope'}
+.ticket-symbol span{position:absolute;right:-3px;top:-7px;font-size:12px}
+.ticket-main>div:nth-child(2){display:grid;gap:5px}
+.ticket-main b{font:700 13px 'Manrope';color:#f8fff8}
+.ticket-main small{font-size:10px;color:#b4c8b9}
+.ticket-arrow{margin-left:auto;color:#c8f169;font-size:23px}
+.ticket-bottom{padding-top:11px;border-top:1px solid #ffffff1c;font-size:7px}
+.auth-panel{padding:45px clamp(30px,5vw,66px);display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#fff 0%,#fbfdf9 100%)}
+.auth-panel-inner{width:100%;max-width:390px}
+.auth-back-link{display:inline-flex;align-items:center;gap:8px;color:#87928b;font-size:11px;font-weight:700;transition:color .2s,transform .2s}
+.auth-back-link:hover{color:#477a48;transform:translateX(-3px)}
+.auth-heading{margin:48px 0 29px}
+.auth-kicker{font-size:9px;font-weight:800;letter-spacing:1.8px;color:#86a65a}
+.auth-heading h2{font:800 35px 'Manrope';letter-spacing:-1.8px;margin:10px 0 7px;color:#192a22}
+.auth-heading h2 span{color:#91b85e}
+.auth-heading p{font-size:12px;color:#7d8981;margin:0;line-height:1.7}
+.auth-form{gap:15px}
+.auth-form .field-label{display:grid;gap:8px;color:#44534a;font-size:10px;font-weight:800;letter-spacing:.2px}
+.input-shell{height:49px;display:flex;align-items:center;gap:10px;padding:0 13px;border:1px solid #e4ebe3;border-radius:11px;background:#fff;transition:border-color .2s,box-shadow .2s,background .2s}
+.input-shell:focus-within{border-color:#9bc66e;box-shadow:0 0 0 4px rgba(164,207,113,.15);background:#fefffc}
+.input-symbol{font-size:14px;color:#9aaf8a;width:17px;text-align:center}
+.input-shell input{min-width:0;flex:1;border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;padding:0!important;height:100%;font-size:12px;color:#203128}
+.input-shell input::placeholder{color:#b2bcb5}
+.password-toggle{border:0;background:#f3f7ef;color:#73856d;border-radius:7px;padding:6px 8px;display:flex;align-items:center;gap:5px;font-size:9px;font-weight:800;cursor:pointer;transition:background .2s,color .2s}
+.password-toggle:hover,.password-toggle.is-visible{background:#e7f2d9;color:#426b37}
+.eye-icon{font-size:13px}
+.password-meter{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;margin-top:-8px}
+.meter-track{height:4px;border-radius:10px;background:#edf1eb;overflow:hidden}
+.meter-track span{display:block;width:0;height:100%;border-radius:10px;background:#a5cb67;transition:width .25s,background .25s}
+.meter-track span[data-level="1"]{background:#e6b75b}
+.meter-track span[data-level="2"]{background:#d3c45d}
+.meter-track span[data-level="3"],.meter-track span[data-level="4"]{background:#79b66a}
+.password-meter>span{font-size:8px;color:#9aa69c;white-space:nowrap}
+.terms-row{display:flex!important;align-items:flex-start;gap:9px!important;color:#849087!important;font-size:9px!important;line-height:1.6;font-weight:500!important}
+.terms-row input{accent-color:#68984b;margin:2px 0 0;width:13px;height:13px}
+.terms-row b{color:#4d6450}
+.auth-submit{height:51px;margin-top:3px;border-radius:11px;justify-content:space-between;padding:0 18px;font-size:11px}
+.auth-submit b{font-size:17px;font-weight:500;transition:transform .2s}
+.auth-submit:hover b{transform:translate(3px,-2px)}
+.form-switch{margin:22px 0 0;text-align:center;color:#8a958d;font-size:10px}
+.form-switch a{color:#416b42;font-weight:800;margin-left:4px}
+.form-switch a span{display:inline-block;transition:transform .2s}
+.form-switch a:hover span{transform:translate(2px,-2px)}
+.demo-hint{display:flex;gap:10px;align-items:center;margin-top:24px;padding:12px 13px;border:1px dashed #dce8d2;border-radius:10px;background:#f7fbf2}
+.demo-dot{width:7px;height:7px;background:#88b75a;border-radius:50%;box-shadow:0 0 0 4px #88b75a20}
+.demo-hint div{display:grid;gap:4px}
+.demo-hint b{font-size:9px;color:#51664d}
+.demo-hint small{font-size:9px;color:#879486}
+.auth-trust{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:24px;color:#a1aaa2;font-size:9px}
+.auth-trust span{color:#87a85d;font-size:14px}
+.flash{animation:flash-in .35s ease both}
+
+/* Scroll reveal and keyframes */
+.reveal-ready{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1);transition-delay:var(--reveal-delay,0ms)}
+.reveal-ready.is-revealed{opacity:1;transform:translateY(0)}
+@keyframes auth-arrive{from{opacity:0;transform:translateY(18px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes float-card{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes glow-breathe{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.07);opacity:1}}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 4px #c8f16920}50%{box-shadow:0 0 0 8px #c8f16908}}
+@keyframes orbit-spin{to{transform:rotate(360deg)}}
+@keyframes flash-in{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){
+  .auth-shell{grid-template-columns:.9fr 1.1fr;margin:30px auto 55px}
+  .auth-showcase{padding:30px 30px;min-height:650px}
+  .auth-panel{padding:38px 30px}
+  .showcase-copy h1{font-size:43px}
+}
+@media(max-width:650px){
+  .auth-shell{grid-template-columns:1fr;margin:22px auto 42px;border-radius:19px}
+  .auth-showcase{min-height:0;padding:24px 24px 22px}
+  .showcase-copy{margin:34px 0 25px}
+  .showcase-copy h1{font-size:39px;letter-spacing:-2px;margin:17px 0 12px}
+  .showcase-copy>p{font-size:11px;max-width:100%}
+  .showcase-points{grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+  .showcase-points>div{align-items:flex-start;gap:8px}
+  .point-icon{width:30px;height:30px;flex:0 0 30px}
+  .showcase-points b{font-size:9px}
+  .showcase-points small{font-size:8px;line-height:1.5}
+  .showcase-ticket{padding:12px}
+  .ticket-main{padding:12px 0}
+  .auth-panel{padding:30px 24px 34px}
+  .auth-heading{margin:27px 0 23px}
+  .auth-heading h2{font-size:30px}
+  .password-meter{grid-template-columns:1fr;gap:5px}
+  .password-meter>span{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal-ready{opacity:1;transform:none}
+}
+
+/* Live parking availability: occupied spaces remain visible but cannot be reserved. */
+.slot-result-card.slot-occupied{background:#f4f5f6;border-color:#e1e4e7;color:#8b929a}
+.slot-result-card.slot-occupied strong{color:#858d96}
+.slot-result-card.slot-occupied .slot-result-rate{color:#a0a6ad}
+.slot-result-card.slot-occupied small{color:#a2a8af}
+.slot-availability-label{display:inline-flex;align-items:center;width:max-content;border-radius:5px;padding:5px 8px;font-size:9px;font-weight:700;letter-spacing:.2px}
+.slot-availability-label.is-available{background:#eff7e7;color:#65863c}
+.slot-availability-label.is-occupied{background:#e7e9eb;color:#7d858e}
+.slot-unavailable-button,.slot-unavailable-button:disabled{background:#e7e9eb;color:#9299a1;cursor:not-allowed;opacity:1;transform:none}
+.slot-result-card.slot-occupied .slot-unavailable-button:hover{transform:none}
+.slot-legend{display:flex;gap:18px;align-items:center;margin:0 0 12px;color:#8c949e;font-size:10px}
+.slot-legend span{display:flex;align-items:center;gap:7px}
+.slot-legend i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.slot-legend .legend-free{background:#c7dfa6}
+.slot-legend .legend-busy{background:#dedfe1}
+
+/* Parkwise v4: notifications, live availability and inventory form */
+.slot-available{background:#f5fff6;border-color:#a9ddb0}.slot-occupied{background:#fff5f5;border-color:#efb5b5}.slot-availability-label{display:inline-block;width:fit-content;padding:6px 11px;border-radius:20px;font-size:11px;font-weight:700}.slot-availability-label.is-available{background:#d9f8df;color:#187b35}.slot-availability-label.is-occupied{background:#ffe0e0;color:#c62828}.slot-unavailable-button,.slot-unavailable-button:disabled{background:#e5e5e5;color:#777;border:1px solid #d5d5d5;cursor:not-allowed;opacity:1}.notification-section{margin-top:30px}.notification-count{display:inline-grid;place-items:center;min-width:23px;height:23px;padding:0 6px;border-radius:20px;background:#edf5df;color:#5f8138;font:700 11px 'DM Sans';vertical-align:middle}.notification-list{display:grid;gap:8px}.notification-item{background:#fff;border:1px solid var(--line);border-radius:9px;padding:13px 16px}.notification-item.unread{border-left:3px solid #9dbb64;background:#fbfdf7}.notification-item strong{font:700 12px 'Manrope'}.notification-item p{margin:5px 0;color:#68717b;font-size:11px}.notification-item small,.notification-empty{color:#9aa2ab;font-size:10px}.admin-add-slot{display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:10px;align-items:end;background:white;border:1px solid var(--line);border-radius:11px;padding:15px;margin-bottom:14px}.admin-add-slot label{display:grid;gap:6px;color:#68717b;font-size:10px;font-weight:700}.admin-add-slot input,.admin-add-slot select{height:40px;border:1px solid #e3e7eb;border-radius:7px;padding:0 10px;background:#fff;min-width:0}.admin-add-slot .btn{height:40px;padding:0 13px;font-size:10px;white-space:nowrap}@media(max-width:900px){.admin-add-slot{grid-template-columns:repeat(2,1fr)}.admin-add-slot .btn{width:100%}}@media(max-width:650px){.admin-add-slot{grid-template-columns:1fr 1fr}.notification-section .section-title{align-items:center}}
+
+/* Parkwise advanced analytics polish */
+.revenue-list{display:grid;gap:13px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.revenue-row{display:grid;grid-template-columns:105px 1fr 90px;gap:12px;align-items:center;color:#7f8b82;font-size:11px}
+.revenue-row strong{text-align:right;color:#24352a;font:700 11px 'Manrope'}
+.revenue-track{height:9px;border-radius:20px;background:#eff3eb;overflow:hidden}
+.revenue-track i{display:block;height:100%;min-width:2px;border-radius:20px;background:linear-gradient(90deg,#a6c875,#537c46);animation:revenueGrow .8s ease both}
+@keyframes revenueGrow{from{width:0;opacity:.5}to{opacity:1}}
+.analytics-section{animation:sectionRise .55s ease both}
+@media(max-width:560px){.revenue-row{grid-template-columns:78px 1fr 72px;gap:8px;font-size:9px}}

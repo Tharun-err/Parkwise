@@ -1,0 +1,31 @@
+{% extends 'base.html' %}{% block title %}My parking — Parkwise{% endblock %}{% block content %}
+<div class="dashboard-head"><div><span class="eyebrow">YOUR PARKING SPACE</span><h1>Good day, {{ session.get('name','there').split(' ')[0] }}.</h1><p>Everything you need for a smoother arrival.</p></div><span class="date-chip" id="today-label">PARKWISE MEMBER</span></div>
+<div class="stat-grid"><div class="stat-card"><span>Available spaces</span><strong>{{ total_slots }}</strong><small>Across all active zones</small></div><div class="stat-card"><span>Your active bookings</span><strong>{{ active_bookings }}</strong><small>Upcoming or checked in</small></div><div class="stat-card stat-accent"><span>Quick tip</span><strong>Scan & go</strong><small>Keep your QR pass ready at entry</small></div></div>
+<section class="section-block notification-section"><div class="section-title"><div><span class="eyebrow">ACCOUNT UPDATES</span><h2>Notifications <span id="notification-count" class="notification-count">0</span></h2><p>Booking confirmations, check-in updates and checkout bills.</p></div><button id="mark-notifications-read" class="mini-action" type="button">Mark all read</button></div><div id="notification-list" class="notification-list"><p class="notification-empty">Your latest updates will appear here.</p></div></section>
+<section class="section-block"><div class="section-title"><div><span class="eyebrow">RESERVE A SPACE</span><h2>Book your parking</h2><p>Choose your arrival and departure time to see live slot availability.</p></div><span class="step-label">01 / BOOK</span></div>
+<div class="booking-panel"><form id="availability-form" class="booking-fields"><label>Arrival<input type="datetime-local" id="start-time" required></label><label>Departure<input type="datetime-local" id="end-time" required></label><label>Vehicle number<input type="text" id="vehicle-number" placeholder="e.g. TS09AB1234" maxlength="15" required></label><button class="btn btn-dark" type="submit">Find spaces <span>↗</span></button></form><div id="slot-message" class="slot-message">Select your time window to see available spaces.</div><div id="slot-results" class="slot-grid"></div></div></section>
+<section class="section-block"><div class="section-title"><div><span class="eyebrow">YOUR ACTIVITY</span><h2>Recent bookings</h2></div><span class="step-label">02 / MANAGE</span></div>
+{% if bookings %}<div class="table-wrap"><table class="data-table"><thead><tr><th>Booking</th><th>Parking slot</th><th>Schedule</th><th>Vehicle</th><th>Amount</th><th>Status</th><th></th></tr></thead><tbody>{% for b in bookings %}<tr><td>#PW{{ '%04d'|format(b.id) }}</td><td><b>{{ b.slot_code }}</b><small>{{ b.zone }} zone · {{ b.vehicle_type }}</small></td><td>{{ b.start_time|replace('T',' ') }}<small>to {{ b.end_time|replace('T',' ') }}</small></td><td>{{ b.vehicle_number }}</td><td>₹{{ '%.2f'|format(b.amount) }}</td><td><span class="status status-{{ b.status }}">{{ b.status|replace('_',' ') }}</span></td><td><a class="table-link" href="{{ url_for('booking_detail', booking_id=b.id) }}">View pass ↗</a>{% if b.status == 'booked' %}<form method="post" action="{{ url_for('user_cancel_booking', booking_id=b.id) }}" onsubmit="return confirm('Cancel this booking?')"><button class="mini-action" type="submit">Cancel</button></form>{% endif %}</td></tr>{% endfor %}</tbody></table></div>{% else %}<div class="empty-state"><div class="empty-icon">⌗</div><h3>No bookings yet</h3><p>Your reserved parking spaces will show up here.</p></div>{% endif %}</section>
+{% endblock %}{% block scripts %}<script>window.PARKWISE={slotsUrl:"{{ url_for('api_slots') }}",bookUrl:"{{ url_for('book') }}",notificationsUrl:"{{ url_for('api_notifications') }}",notificationsReadUrl:"{{ url_for('notifications_read') }}"};</script><script src="{{ url_for('static', filename='js/booking.js', v='4') }}"></script>
+<script>
+(async function(){
+ const list=document.getElementById('notification-list');
+ const count=document.getElementById('notification-count');
+ async function refresh(){
+  try{
+   const r=await fetch(window.PARKWISE.notificationsUrl); const d=await r.json();
+   count.textContent=d.unread;
+   if(!d.items.length){list.innerHTML='<p class="notification-empty">No notifications yet.</p>';return;}
+   list.innerHTML='';
+   d.items.forEach(n=>{const item=document.createElement('article');item.className='notification-item'+(n.is_read?'':' unread');
+    const title=document.createElement('strong');title.textContent=n.title;
+    const msg=document.createElement('p');msg.textContent=n.message;
+    const date=document.createElement('small');date.textContent=n.created_at;
+    item.append(title,msg,date);list.append(item);
+   });
+  }catch(e){list.textContent='Notifications are temporarily unavailable.';}
+ }
+ document.getElementById('mark-notifications-read').addEventListener('click',async()=>{await fetch(window.PARKWISE.notificationsReadUrl,{method:'POST'});refresh();});
+ refresh();setInterval(refresh,20000);
+})();
+</script>{% endblock %}
